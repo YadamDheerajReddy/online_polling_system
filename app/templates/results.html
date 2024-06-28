@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Results{% endblock %}
+{% block content %}
+<h1>Results for: {{ poll.question }}</h1>
+<ul class="poll-results">
+    {% for option, count in results.items() %}
+        <li class="result-item">
+            <span class="option">{{ option }}</span>
+            <span class="count">{{ count }} votes</span>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

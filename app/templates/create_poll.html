@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Create Poll{% endblock %}
+{% block content %}
+<h1>Create Poll</h1>
+<form method="POST" action="">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+        {{ form.question.label }}<br>
+        {{ form.question(size=64) }}
+    </div>
+    <div class="form-group">
+        {{ form.options.label }}<br>
+        {{ form.options(rows=5) }}
+    </div>
+    <div class="form-group">
+        {{ form.submit() }}
+    </div>
+</form>
+{% endblock %}

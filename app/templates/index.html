@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<h1>Welcome to the Online Polling System</h1>
+<ul class="poll-list">
+    {% for poll in polls %}
+        <li class="poll-item">
+            <a href="{{ url_for('main.poll', poll_id=poll.id) }}">{{ poll.question }}</a>
+            {% if poll.active %}
+                <span>(Active)</span>
+            {% else %}
+                <span>(Closed)</span>
+            {% endif %}
+            <div class="actions">
+                {% if poll.author == current_user %}
+                    {% if poll.active %}
+                        <a href="{{ url_for('main.stop_poll', poll_id=poll.id) }}">Stop Poll</a>
+                    {% endif %}
+                    <a href="{{ url_for('main.results', poll_id=poll.id) }}">View Results</a>
+                    <form action="{{ url_for('main.delete_poll', poll_id=poll.id) }}" method="POST" style="display: inline;">
+                        <button type="submit" class="btn-delete">Delete</button>
+                    </form>
+                {% endif %}
+            </div>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

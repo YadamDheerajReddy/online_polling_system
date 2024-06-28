@@ -1,0 +1,286 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+nav {
+    background-color: #343a40;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    color: #fff;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.container {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 80%;
+    max-width: 600px;
+}
+
+.form-container {
+    width: 300px;
+    margin: auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: #0056b3;
+}
+
+.alert {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.alert-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+nav .links {
+    display: flex;
+    gap: 10px;
+}
+
+nav .links a {
+    padding: 8px 12px;
+    background-color: #495057;
+    border-radius: 4px;
+}
+
+nav .links a:hover {
+    background-color: #6c757d;
+}
+
+.poll-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.poll-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    padding: 15px;
+    transition: transform 0.2s;
+}
+
+.poll-item:hover {
+    transform: translateY(-5px);
+}
+
+.poll-item a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.poll-item span {
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.poll-item .actions {
+    margin-top: 10px;
+}
+
+.poll-item .actions a {
+    color: #495057;
+    margin-right: 10px;
+}
+
+.poll-item .actions a:hover {
+    color: #007bff;
+}
+
+.poll-results {
+    list-style-type: none;
+    padding: 0;
+}
+
+.result-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    padding: 15px;
+    transition: transform 0.2s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.result-item:hover {
+    transform: translateY(-5px);
+}
+
+.result-item .option {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+}
+
+.result-item .count {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.voting-form {
+    margin-top: 20px;
+}
+
+.voting-option {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    padding: 10px;
+    transition: transform 0.2s;
+}
+
+.voting-option:hover {
+    transform: translateY(-5px);
+}
+
+.voting-option input[type="radio"] {
+    margin-right: 10px;
+}
+
+.voting-option label {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+}
+
+.voting-submit {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.voting-submit:hover {
+    background-color: #0056b3;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.remember-me input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.remember-me label {
+    font-size: 14px;
+    color: #333;
+}
+
+.form-group button,
+.form-group .btn-primary {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.form-group button:hover,
+.form-group .btn-primary:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}{{ poll.question }}{% endblock %}
+{% block content %}
+<h1>{{ poll.question }}</h1>
+<form class="voting-form" method="POST" action="">
+    {% for option in options %}
+        <div class="voting-option">
+            <input type="radio" id="option{{ loop.index }}" name="option" value="{{ option }}">
+            <label for="option{{ loop.index }}">{{ option }}</label>
+        </div>
+    {% endfor %}
+    <button type="submit" class="voting-submit">Vote</button>
+</form>
+{% endblock %}
